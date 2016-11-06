@@ -49,7 +49,7 @@ object SmoothDst {
         if (periodToday.offset != periodTomorrow.offset) {
           val delta      = deltaMinutes(periodToday.offset, periodTomorrow.offset)
           val difference = delta.abs
-          val direction  = if (delta >= 0) "forward" else "back"
+          val direction  = if (delta >= 0) "back" else "forward"
 
           Some(s"Clocks are moving $direction $difference minutes tonight. Ease through the time change and wake up $adjustWords tomorrow.")
         }
